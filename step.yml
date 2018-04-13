@@ -20,6 +20,9 @@ properties:
 - name: compartment_ocid
   type: string
   required: true
+- name: s3_bucket_namespace
+  type: string
+  required: true
 - name: k8smaster_count
   type: string
   required: false
@@ -44,7 +47,4 @@ properties:
   type: string
   required: false
   default: "us-ashburn-1"
-- name: s3_bucket_namespace
-  type: string
-  required: true
 
