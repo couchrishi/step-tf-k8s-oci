@@ -1,0 +1,50 @@
+# Copyright 2018, Oracle Corporation and/or its affiliates. All rights reserved.
+
+name: tf-k8s-oci
+version: 0.0.1
+summary: Terraform a Kubernetes Cluster on Oracle Cloud Infrastructure.
+tags: 
+  - terraform
+  - kubernetes
+  - oci
+properties:
+- name: tenancy_ocid
+  type: string
+  required: true
+- name: user_ocid
+  type: string
+  required: true
+- name: fingerprint
+  type: string
+  required: true
+- name: compartment_ocid
+  type: string
+  required: true
+- name: k8smaster_count
+  type: string
+  required: false
+  default: "3"
+- name: k8sworker_count
+  type: string
+  required: false
+  default: "3"
+- name: etcd_count
+  type: string
+  required: false
+  default: "3"
+- name: k8smaster_shape
+  type: string
+  required: false
+  default: "VM.Standard1.4"
+- name: k8sworker_shapre
+  type: string
+  required: false
+  default: "VM.Standard1.4"
+- name: region
+  type: string
+  required: false
+  default: "us-ashburn-1"
+- name: s3_bucket_namespace
+  type: string
+  required: true
+
